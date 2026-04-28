@@ -230,3 +230,5 @@ Thumbs.db
 
 data/raw/
 outputs/models/
+
+*.zip
