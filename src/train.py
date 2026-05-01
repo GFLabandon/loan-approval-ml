@@ -212,8 +212,8 @@ def run_smote_comparison(X_train, X_val, y_train, y_val, cv) -> pd.DataFrame:
     """
     try:
         from imblearn.over_sampling import SMOTE
-    except ImportError:
-        print("[SMOTE] 跳过：请先安装 imbalanced-learn（pip install imbalanced-learn）")
+    except Exception as e:
+        print(f"[SMOTE] 跳过：{type(e).__name__}: {e}")
         return pd.DataFrame()
 
     print("\n" + "=" * 55)
